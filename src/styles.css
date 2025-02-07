@@ -270,3 +270,35 @@ textarea {
   75% { transform: translateX(-3px); }
   100% { transform: translateX(0); }
 }
+
+
+
+
+
+
+/* Customize the scrollbar width */
+/* Scrollbar Base Styling */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: var(--gold-color);
+  /* border-radius: 0.4rem; */
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--sec-color);
+  border-radius: 0.4rem;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Scrollbar Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(0, var(--sec-color), var(--sec-color), var(--gold-color), var(--sec-color), var(--sec-color));
+  cursor: pointer;
+  transform: scale(1.1);
+}
+

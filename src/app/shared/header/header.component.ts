@@ -5,7 +5,7 @@ import { CarouselComponent } from '../carousel/carousel.component';
 import { RouterModule } from '@angular/router';
 
 
-import { faPhone , faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faBars, faX} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter, faPinterest, faBehance } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -29,9 +29,14 @@ export class HeaderComponent implements OnInit{
   faTwitter = faTwitter;
   faPinterest = faPinterest;
   faBehance = faBehance;
+  faBars = faBars;
+  faX = faX;
 
-  isHovered: boolean = false;
+  isNavbarOpen: boolean = false;
   constructor(){}
   ngOnInit(): void {
   }
-}
+    toggleNavbar() {
+      this.isNavbarOpen = !this.isNavbarOpen;
+    }
+  }

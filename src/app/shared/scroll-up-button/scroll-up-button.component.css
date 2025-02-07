@@ -1,0 +1,56 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--bg-color);
+  color: var(--sec-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.progress-ring {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg,
+.progress-ring-fill {
+  fill: none;
+  stroke-width: 4;
+  cx: 30;
+  cy: 30;
+  r: 25;
+}
+
+.progress-ring-bg {
+  stroke: var(--gol-color);
+}
+
+.progress-ring-fill {
+  stroke: #0F487D;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.2s ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover{
+  transform: rotate(360deg) scale(1.1);
+}

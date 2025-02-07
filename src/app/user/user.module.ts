@@ -13,6 +13,7 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { CarouselComponent } from '../shared/carousel/carousel.component';
 import { ServiceCardComponent } from '../shared/service-card/service-card.component';
+import { ScrollUpButtonComponent } from '../shared/scroll-up-button/scroll-up-button.component';
 
 
 
@@ -33,7 +34,8 @@ import { ServiceCardComponent } from '../shared/service-card/service-card.compon
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    ScrollUpButtonComponent
   ]
 })
 export class UserModule { }

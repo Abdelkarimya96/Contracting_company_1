@@ -1,2 +1,10 @@
-
-
+<div class="scroll-to-top" *ngIf="isVisible" (click)="scrollToTop()">
+  <svg class="progress-ring" width="60" height="60">
+    <circle class="progress-ring-bg" cx="30" cy="30" r="25"></circle>
+    <circle class="progress-ring-fill" cx="30" cy="30" r="25"
+      [attr.stroke-dasharray]="'157'"
+      [attr.stroke-dashoffset]="157 - (scrollProgress * 1.57)"
+    ></circle>
+  </svg>
+  <div class="arrow"><fa-icon [icon]="faCircleArrowUp"></fa-icon></div>
+</div>
