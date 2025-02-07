@@ -1,0 +1,126 @@
+<header style="position: absolute;" class="header-top d-lg-block d-none p-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ">
+        <ul class="info-head d-flex align-items-center">
+          <li>
+            <a href="mailto:info@company.com">
+              <fa-icon [icon]="faEnvelope"></fa-icon>
+              <span class="mx-2">infoAtCompany.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+966548268114">
+              <fa-icon [icon]="faPhone"></fa-icon>
+              <span class="mx-2">+12345678</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <div class="social-head">
+          <a href="https://www.facebook.com" target="_blank">
+            <fa-icon [icon]="faFacebook" aria-hidden="true"></fa-icon>
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
+          </a>
+          <a href="https://www.behance.net/" target="_blank">
+            <fa-icon [icon]="faBehance" aria-hidden="true"></fa-icon>
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <fa-icon [icon]="faTwitter" aria-hidden="true"></fa-icon>
+          </a>
+          <a href="https://www.pinterest.com" target="_blank">
+            <fa-icon [icon]="faPinterest" aria-hidden="true"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<nav class="navbar navbar-expand-lg py-1" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/user/home">
+      <img style="max-width: 4rem; border-radius: 1rem;"
+            class="logo" src="./../../../assets/images/logo.jpg" alt="logo image"
+      >
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/user"
+            routerLinkActive="nav-link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/user/projects"
+            routerLinkActive="nav-link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            المشروعات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/user/services"
+            routerLinkActive="nav-link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            الخدمات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/user/about-us"
+            routerLinkActive="nav-link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            من نحن
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            routerLink="/user/home"
+            fragment="contact-us"
+            class="nav-link"
+            routerLinkActive="nav-link-active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+          اتصل بنا
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<app-carousel></app-carousel>
+
+
+
+
+
+
+
+
+
+

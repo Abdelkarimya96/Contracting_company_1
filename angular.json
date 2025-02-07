@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "contract-comp": {
+    "contracting-company": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/contract-comp",
+            "outputPath": "dist/contracting-company",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -35,9 +35,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/aos/dist/aos.css",
+              "node_modules/animate.css/animate.min.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "src/styles.css",
+              "./src/assets/animate.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -72,10 +80,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "contract-comp:build:production"
+              "buildTarget": "contracting-company:build:production"
             },
             "development": {
-              "buildTarget": "contract-comp:build:development"
+              "buildTarget": "contracting-company:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "contract-comp:build"
+            "buildTarget": "contracting-company:build"
           }
         },
         "test": {

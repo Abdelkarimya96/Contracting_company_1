@@ -1,0 +1,50 @@
+/* Main Container */
+.main-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--dark-color);
+  padding: 3rem 0;
+}
+
+/* Section Title */
+.services-section .section-title {
+  color: var(--bg-color);
+  border-bottom: 2px solid var(--bg-color);
+  width: fit-content;
+  margin: 0 auto 4rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem; /* Keeping original font size */
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .services-section .section-title {
+    padding: 0.8rem 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-card img {
+    max-width: 180px;
+  }
+
+  .service-card .service-description {
+    padding: 0.5rem;
+  }
+}
+
+
+.main-container div.hr{
+  width: 80%;
+  height: 2px;
+  background-color: var(--bg-color);
+  margin: 2rem auto ;
+}

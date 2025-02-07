@@ -1,0 +1,71 @@
+<!-- --------------------- services section ------------------------------------------------------------------------- -->
+<section class="services-section text-center py-5 px-2">
+  <div class="main-container">
+    <h2 class="section-title mb-4 title">
+      من خدماتنا
+    </h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 mb-4" *ngFor="let service of services">
+          <app-service-card [service]="service"></app-service-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="more">
+    <button routerLink="/user/services" class="btn wobble">خدمات أخرى</button>
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+<!-- --------------- contact us section ------------------------------------------------------------------------------ -->
+<section id="contact-us">
+  <div class="contact-section py-5 text-center">
+    <p data-aos="fade-right" class="section-title mb-3 title">تواصل معنا</p>
+    <h2 data-aos="fade-right" class="section-subtitle mb-4"> يسرنا مساعدتك </h2>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-s-12 col-md-6 col-lg-4 mb-4">
+          <div data-aos="fade-left" class="contact-card py-4 rounded">
+            <fa-icon [icon]="faLocationArrow" class="mb-3"></fa-icon>
+            <div class="card-text">
+              <h5 class="contact-title mb-2">العنوان</h5>
+              <p class="contact-text">
+                الطريق الدائري الغربي 7788 - حي اسم الحي  - جدة -
+                المملكة العربية السعودية
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-s-12 col-md-6 col-lg-4 mb-4">
+          <div data-aos="fade-up" class="contact-card py-4 rounded">
+            <fa-icon [icon]="faEnvelope" class="mb-3"></fa-icon>
+            <div class="card-text">
+              <h5 class="contact-title mb-2">بيانات التواصل</h5>
+              <p class="contact-text">0123456789</p>
+              <p class="contact-text">infoemailaddress.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-s-12 col-md-6 col-lg-4 mb-4">
+          <div data-aos="fade-right" class="contact-card py-4 rounded">
+            <fa-icon [icon]="faClock" class="mb-3"></fa-icon>
+            <div class="card-text">
+              <h5 class="contact-title mb-2">ساعات العمل</h5>
+              <p class="contact-text">من السبت إلى الخميس 9:00 حتي 5:00</p>
+              <p class="contact-text">الجمعة إجازة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

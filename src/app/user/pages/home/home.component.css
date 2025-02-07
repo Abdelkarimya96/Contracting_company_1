@@ -1,0 +1,128 @@
+/* -------------------- contact us section --------------------- */
+
+.contact-section {
+  background-color: var(--bg-color);
+  color: #333333;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.contact-card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 200px;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  background-color: rgb(226, 237, 242);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease!important;
+  p{
+    color: var(--gray-color);
+  }
+}
+
+.contact-card:hover {
+  transform: translateX(5px) translateY(-5px);
+  box-shadow: 10px 20px 30px rgba(73, 73, 73, 0.4);
+  cursor: pointer;
+}
+.contact-card .card-text{
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  p{
+    text-align: right;
+    width: 200px;
+  }
+}
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.section-title, fa-icon{
+  color: var(--gold-color);
+}
+fa-icon{
+  font-size: 2.4rem;
+  margin: 0 0 1rem 1rem;
+}
+
+
+
+/* s ------------------ services section --------------------- */
+/* Main Container */
+.main-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--dark-color);
+  padding: 3rem 0;
+}
+
+/* Section Title */
+.services-section .section-title {
+  color: var(--bg-color);
+  width: fit-content;
+  margin: 0 auto 4rem;
+  /* padding: 1rem 3rem; */
+  font-size: 1.8rem; /* Keeping original font size */
+  text-align: center;
+  width: fit-content;
+}
+
+@media (max-width: 480px) {
+  .services-section .section-title {
+    padding: 0.8rem 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-card img {
+    max-width: 180px;
+  }
+
+  .service-card .service-description {
+    padding: 0.5rem;
+  }
+}
+
+.services-section button{
+  background-color: transparent;
+  color: var(--bg-color);
+  padding: 0.7rem 1.1rem;
+  border: 2px solid var(--bg-color);
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  transition: 0.6s all ease;
+}
+
+.services-section .more{
+  padding-bottom: 2rem;
+  border-top: 2px solid var(--bg-color);
+  width: 50%;
+  margin: 0 auto;
+}

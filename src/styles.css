@@ -1,1 +1,272 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color: #000000;
+  --sec-color: #0F487D;
+  --gray-color: #a3a3a3;
+  --dark-color: #272727;
+  --bg-color: #F1F1F1;
+  --bg-grid: linear-gradient(129deg, #707070 0%, #000000 100%);
+  --gold-color: #d1ae12;
+  --gold-color-shiny: #f7cb06;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  outline: none;
+}
+
+p {
+  text-decoration: none;
+  font-family: "Noto Sans Arabic", serif;
+  color: #000;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+a{
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: #4f9ff3;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+button,
+button:hover {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans Arabic", serif;
+  background: #fff;
+  direction: rtl;
+  text-align: start;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: bahijPlain;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+header,
+section,
+footer {
+  /* float: right; */
+  /* width: 100%; */
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+}
+
+p {
+  margin: 0;
+  color: #414141;
+  font-size: 17px;
+  line-height: 27px;
+  /* font-weight: 300; */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: block;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+ul li {
+  display: block;
+  list-style: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main {
+  float: right;
+  width: 100%;
+}
+
+.padding {
+  padding: 0 !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+button,
+input:focus,
+button:focus,
+input:active,
+button:active,
+button:hover,
+textarea:active,
+textarea:focus,
+select,
+select:active,
+select:focus {
+  outline: none !important;
+}
+
+textarea {
+  resize: none;
+}
+
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+
+
+.headline {
+  width: fit-content;
+  margin: 0;
+  color: var(--sec-color);
+  position: relative;
+  font-weight: bold;
+  font-size: 26px;
+  padding-bottom: 15px;
+  transition: all 0.3s linear;
+  z-index: 1000;
+}
+.headline::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  background: var(--bg-grid);
+}
+.headline::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--sec-color);
+  bottom: -5px;
+  border-radius: 50%;
+  z-index: 0;
+  animation: rightLeft 5s linear infinite;
+}
+@keyframes rightLeft {
+  0% {
+      -webkit-transform: translateX(-0);
+      transform: translateX(-0);
+  }
+  50% {
+      -webkit-transform: translateX(-50px);
+      transform: translateX(-50px);
+  }
+  100% {
+      -webkit-transform: translateX(-0);
+      transform: translateX(-0);
+  }
+}
+
+
+.title {
+  color: var(--bg-color);
+  position: relative;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding-bottom: 15px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 1px;
+    background: #fff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--gold-color);
+    bottom: -5px;
+    border-radius: 50%;
+    animation: rightLeft 5s linear infinite;
+  }
+}
+
+.nav-link-active {
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -0.5rem;
+    width: 50px;
+    height: 2px;
+    background-color: var(--bg-color)!important;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--sec-color);
+    bottom: calc(-0.5rem - 5px);
+    border-radius: 50%;
+    animation: rightLeft 4s linear infinite;
+  }
+}
+
+.wobble:hover{
+  animation: roughWobbleX 0.6s ease-in-out;
+}
+
+
+@keyframes roughWobbleX {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-8px); }
+  30% { transform: translateX(7px); }
+  45% { transform: translateX(-5px); }
+  60% { transform: translateX(6px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
