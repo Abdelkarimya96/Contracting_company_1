@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
-import AOS from 'aos';
 import { filter } from 'rxjs/operators';
+import AOS from 'aos';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -55,3 +56,5 @@ export class AppComponent implements OnInit, AfterViewInit {
     AOS.refresh();
   }
 }
+
+

@@ -11,7 +11,7 @@ import { faCircleArrowUp } from '@fortawesome/free-solid-svg-icons';
     FontAwesomeModule
   ],
   templateUrl: './scroll-up-button.component.html',
-  styleUrl: './scroll-up-button.component.css'
+  styleUrls: ['./scroll-up-button.component.css']
 })
 export class ScrollUpButtonComponent {
   isVisible = false;

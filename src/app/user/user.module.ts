@@ -35,7 +35,8 @@ import { ScrollUpButtonComponent } from '../shared/scroll-up-button/scroll-up-bu
     FooterComponent,
     CarouselComponent,
     ServiceCardComponent,
-    ScrollUpButtonComponent
+    ScrollUpButtonComponent,
+
   ]
 })
 export class UserModule { }

@@ -40,3 +40,4 @@ export class HeaderComponent implements OnInit{
       this.isNavbarOpen = !this.isNavbarOpen;
     }
   }
+

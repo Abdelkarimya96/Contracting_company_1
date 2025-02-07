@@ -170,43 +170,15 @@ nav button fa-icon{
   }
   nav .container{
     padding-top: 3rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.5rem;}
+/* Responsive Navbar Spacing */
+@media (max-width: 992px) {
+  nav{
+    background-color: rgba(0, 126, 65, 0.677);
+    top: 5rem;
   }
   ul.navbar-nav {
     margin-top: 1.5rem;
     text-align: center;
   }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}}
