@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
         setTimeout(()=>{
           this.loaderService.hide();
-        }, 100)
+        }, 1500)
       }
     });
   }
