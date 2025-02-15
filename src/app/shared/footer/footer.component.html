@@ -1,67 +1,117 @@
-<footer class="">
-  <div style="height: 100%;" class="container" data-aos="zoom-in">
+<footer>
+  <div class="contain px-4 pt-5 pb-2" data-aos="zoom-in">
     <div class="row">
       <!-- About the Company -->
-      <div class="col-md-4" data-aos="fade-up">
-        <h5 class="mt-5 mb-4 title">عن الشركة</h5>
-        <p class="mb-3 about">
-          شركة (اسم الشركة) البناء للمقاولات العامة تأسست عام ٢٠٠٥ م وهي شركة رائدة في مجال المقاولات العامة منذ تأسيسها
-          حققت نجاحاً كبيراً في تنفيذ العديد من المشاريع الكبرى العامة للمباني السكنية وغير السكنية.
-        </p>
+      <div class="col-md-4 p-0" data-aos="fade-up">
+        <h5 class="mt-5 mb-4 me-0 title">روابط التواصل الإجتماعي</h5>
+        <!-- <p class="mb-3 about">
+          {{ info?.general_info?.about || 'لم يتم توفير معلومات عن الشركة' }}
+        </p> -->
         <div class="d-flex gap-2 social-container">
-          <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="200"><fa-icon class="social-icon" [icon]="faFacebook"></fa-icon></a>
-          <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="400"><fa-icon class="social-icon" [icon]="faTwitter"></fa-icon></a>
-          <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="600"><fa-icon class="social-icon" [icon]="faInstagram"></fa-icon></a>
-          <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="800"><fa-icon class="social-icon" [icon]="faLinkedin"></fa-icon></a>
-          <a href="#" class="social-link" data-aos="zoom-in" data-aos-delay="1000"><fa-icon class="social-icon" [icon]="faTiktok"></fa-icon></a>
+          <!-- WhatsApp -->
+          <a class="social-link"
+            [href]="'https://wa.me/' + info?.social_links?.whatsapp"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="social-icon">
+              <fa-icon [icon]="faWhatsapp" aria-hidden="true"></fa-icon>
+            </span>
+          </a>
+
+          <!-- Instagram -->
+          <a class="social-link"
+            [href]="info?.social_links?.instagram"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="social-icon">
+              <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
+            </span>
+          </a>
+
+          <!-- TikTok -->
+          <a class="social-link"
+            [href]="info?.social_links?.tiktok"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="social-icon">
+              <fa-icon [icon]="faTiktok" aria-hidden="true"></fa-icon>
+            </span>
+          </a>
+
+          <!-- Snapchat -->
+          <a class="social-link"
+            [href]="info?.social_links?.snapchat"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span class="social-icon">
+              <fa-icon [icon]="faSnapchat" aria-hidden="true"></fa-icon>
+            </span>
+          </a>
         </div>
       </div>
 
       <!-- Quick Links -->
-      <div class="col-md-4 pe-md-5" data-aos="fade-up">
-        <h5 class="mt-5 mb-4 title">روابط سريعة</h5>
-        <ul class="list-unstyled">
-          <li data-aos="fade-right">
+      <div class="col-md-4 p-0" data-aos="fade-up">
+        <h5 class="mt-5 mb-4 title  me-0">روابط سريعة</h5>
+        <ul>
+          <li>
             <fa-icon [icon]="faAngleLeft"></fa-icon>
-            <a routerLink="/user/about-us">من نحن</a>
+            <a
+              routerLink="/user/about-us"
+              fragment="about-us">
+              من نحن
+            </a>
           </li>
-          <li data-aos="fade-right">
+
+          <li>
             <fa-icon [icon]="faAngleLeft"></fa-icon>
-            <a routerLink="/user/projects">مشاريعنا</a>
+            <a
+              routerLink="/user/projects"
+              fragment="our-projects">
+              مشاريعنا
+            </a>
           </li>
-          <li data-aos="fade-right">
+
+          <li>
             <fa-icon [icon]="faAngleLeft"></fa-icon>
-            <a routerLink="/user/services">خدماتنا</a>
-            <a href="#">أخبارنا</a>
+            <a
+              routerLink="/user/services"
+              fragment="our-services">
+              خدماتنا
+            </a>
           </li>
-          <li data-aos="fade-right">
+
+          <li>
             <fa-icon [icon]="faAngleLeft"></fa-icon>
-            <a routerLink="/user/home" fragment="contact-us">تواصل معنا</a>
-            <a routerLink="/user/contact-us">تواصل معنا</a>
+            <a
+              routerLink="/user/home#contact-us"
+              fragment="contact-us">
+              تواصل معنا
+            </a>
           </li>
         </ul>
       </div>
 
       <!-- Contact Us -->
-      <div class="col-md-4" data-aos="fade-up">
-        <h5 class="mt-5 mb-4 title">تواصل معنا</h5>
-        <div class="mb-3 d-flex align-items-center info" data-aos="slide-right">
-          <fa-icon [icon]="faLocationDot" class="mx-2 fa-info"></fa-icon>
-          <span>الطريق الدائري الشرقي 9900 - حي (اسم المكان) الغربي - البلد</span>
+      <div class="col-md-4 p-0" data-aos="fade-up">
+        <h5 class="mt-5 mb-4 title  me-0">تواصل معنا</h5>
+        <div class="info">
+          <fa-icon [icon]="faLocationDot" class="fa-info"></fa-icon>
+          <span>{{ info?.contact_info?.address }}</span>
         </div>
-        <div class="mb-3 d-flex align-items-center info" data-aos="slide-right">
-          <fa-icon [icon]="faPhone" class="mx-2 fa-info"></fa-icon>
-          <span>رقم الهاتف : 0123456789</span>
+        <div class="info">
+          <fa-icon [icon]="faPhone" class="fa-info"></fa-icon>
+          <span>رقم الهاتف: {{ info?.contact_info?.phone_number }}</span>
         </div>
-        <div class="mb-3 d-flex align-items-center info" data-aos="slide-right">
-          <fa-icon [icon]="faEnvelope" class="fa-info mx-2"></fa-icon>
-          <span>البريد الإلكتروني : inemailaddress.com</span>
+        <div class="info">
+          <fa-icon [icon]="faEnvelope" class="fa-info"></fa-icon>
+          <span>البريد الإلكتروني: {{ info?.contact_info?.email }}</span>
         </div>
       </div>
     </div>
 
-    <div class="copyright text-center py-4">
-      <small>© جميع الحقوق محفوظة | شركة (اسم الشركة) البناء للمقاولات العامة 2025</small>
+    <div class="copyright">
+      <small>© جميع الحقوق محفوظة | شركة {{ info?.general_info?.name }} 2025</small>
     </div>
   </div>
 </footer>

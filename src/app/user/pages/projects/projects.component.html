@@ -1,1 +1,14 @@
-<p>projects works!</p>
+<section id="our-projects" class="projects-section text-center py-5 px-5">
+  <div class="main-container">
+    <h2 style="width: fit-content;" class="section-title title mb-1">
+      مشروعاتنا
+    </h2>
+    <div class="contain my-5">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let project of projects">
+          <app-project-card [project]="project"></app-project-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>

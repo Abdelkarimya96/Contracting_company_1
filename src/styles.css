@@ -284,7 +284,7 @@ textarea {
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  background: var(--gold-color);
+  /* background: var(--gold-color); */
   /* border-radius: 0.4rem; */
 }
 
@@ -302,3 +302,9 @@ textarea {
   transform: scale(1.1);
 }
 
+/* ----------------------- for loader -------------------- */
+
+/* body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+} */

@@ -6,14 +6,17 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { LandingComponent } from './landing/landing.component';
+import { ProjectDetailsComponent } from './pages/project-details/project-details.component';
+
 
 const routes: Routes = [
   {path: '', component: LandingComponent,
     children:[
+      {path: '', component: HomeComponent},
       {path: 'home', component: HomeComponent},
       {path: 'about-us', component: AboutUsComponent},
       {path: 'contact-us', redirectTo: '/', pathMatch: 'full'},
-      // {path: 'contact-us', component: ContactUsComponent},
+      {path: 'project-details/:id', component: ProjectDetailsComponent},
       {path: 'services', component: ServicesComponent},
       {path: 'projects', component: ProjectsComponent},
       {path: '**', component: HomeComponent},

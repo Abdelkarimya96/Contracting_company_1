@@ -1,35 +1,35 @@
-<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+<div id="interCarousel" class="mainCarousel carousel slide" data-bs-ride="carousel">
   <!-- Carousel Indicators -->
   <div class="carousel-indicators">
     <button
       *ngFor="let slide of slides; let i = index"
       type="button"
-      data-bs-target="#mainCarousel"
+      data-bs-target="#interCarousel"
       [attr.data-bs-slide-to]="i"
       [class.active]="i === 0"
       [attr.aria-current]="i === 0 ? 'true' : null"
-      [attr.aria-label]="'Slide ' + (i + 1)"
+      [attr.aria-label]="'Slide ' + (i + 1)"s
     ></button>
   </div>
 
   <!-- Carousel Inner -->
   <div class="carousel-inner">
     <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
-      <img [src]="slide.src" class="d-block w-100" [alt]="slide.alt" />
+      <img [src]="slide.src" [alt]="slide.alt" />
       <div class="carousel-caption" style="position: absolute; top: 18%; text-align: center;">
         <h5>{{ slide.title }}</h5>
-        <button class="btn wobble"> <a routerLink="/user/about-us">المزيد</a></button>
+        <button class="btn wobble"><a fragment="about-us" routerLink="/user/about-us">المزيد</a></button>
       </div>
     </div>
   </div>
 
   <!-- Carousel Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#interCarousel" data-bs-slide="prev">
     <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
     <fa-icon class="icon-carousel" [icon]="faAngleLeft"></fa-icon>
     <!-- <span class="visually-hidden">Previous</span> -->
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#interCarousel" data-bs-slide="next">
     <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
     <!-- <span class="visually-hidden">Next</span> -->
      <fa-icon class="icon-carousel" [icon]="faAngleRight"></fa-icon>

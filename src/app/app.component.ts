@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, Router, NavigationStart, NavigationEnd, NavigationCancel, NavigationError } from '@angular/router';
+import { LoaderService } from './Services/loader.service';
 import { filter } from 'rxjs/operators';
 import AOS from 'aos';
 import { delay } from 'rxjs';
@@ -12,7 +13,21 @@ import { delay } from 'rxjs';
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'contracting-company';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private router: Router,
+    private loaderService: LoaderService,
+    private route: ActivatedRoute
+  ) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.loaderService.show();
+      } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
+        setTimeout(()=>{
+          this.loaderService.hide();
+        }, 100)
+      }
+    });
+  }
 
   ngOnInit() {
     AOS.init({
@@ -39,19 +54,18 @@ export class AppComponent implements OnInit, AfterViewInit {
   private scrollToFragment() {
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
-        setTimeout(() => { // Delay to ensure DOM is ready
+        setTimeout(() => {
           const element = document.getElementById(fragment);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
           } else {
             console.log('No fragment found:', fragment);
           }
-        }, 100); // Small delay for stability
+        }, 100);
       }
     });
   }
 
-  // Refresh AOS - for dynamic content
   refreshAOS() {
     AOS.refresh();
   }

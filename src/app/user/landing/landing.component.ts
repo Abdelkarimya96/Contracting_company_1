@@ -25,7 +25,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   private scrollToFragment() {
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
-        setTimeout(() => { 
+        setTimeout(() => {
           const element = document.getElementById(fragment);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });

@@ -1,0 +1,31 @@
+<div class="project-card p-4">
+  <div class="image" style="  overflow: hidden;">
+    <img
+      fragment="project-details"
+      [routerLink]="['/user/project-details', project.id]"
+      [src]="project.images[0]" class="project-img"
+      alt="{{ project.title }}"
+      loading="lazy"
+    />
+  </div>
+  <div class="project-info">
+    <h5
+      fragment="project-details"
+      [routerLink]="['/user/project-details', project.id]"
+      class="project-title">{{ project.title }}
+    </h5>
+    <h4
+      fragment="project-details"
+      [routerLink]="['/user/project-details', project.id]"
+      class="project-description">{{ project.location }}
+    </h4>
+  </div>
+</div>
+
+
+
+
+
+
+
+

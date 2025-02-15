@@ -135,16 +135,8 @@ nav .nav-link {
 /* nav button.navbar-toggler {} */
 
 nav button.navbar-toggler:focus {
-  border: solid #ffffff 2px;
+  border: solid var(--sec-color) 2px;
   box-shadow: none;
-}
-
-button.navbar-toggler {
-  border-color: var(--theme-color_1);
-}
-
-button.navbar-toggler:focus {
-  border-color: var(--theme-color_1);
 }
 
 
@@ -158,27 +150,19 @@ nav button fa-icon{
   nav{
     top: 0;
   }
-  nav.navbar-open{
+
+  nav.collapsed{
     background-color: var(--gold-color);
-    /* &::after{
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(0, 126, 65, 0.677);
-    } */
-  }
-  nav .container{
-    padding-top: 3rem;
-    padding-bottom: 0.5rem;}
-/* Responsive Navbar Spacing */
-@media (max-width: 992px) {
-  nav{
-    background-color: rgba(0, 126, 65, 0.677);
-    top: 5rem;
+    top: 0rem;
   }
   ul.navbar-nav {
     margin-top: 1.5rem;
     text-align: center;
+    padding-bottom: 4rem;
   }
-}}
+  nav .container{
+    margin-top: 2rem;
+  }
+}
+
+

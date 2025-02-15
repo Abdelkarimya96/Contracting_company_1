@@ -14,6 +14,7 @@ import { FooterComponent } from '../shared/footer/footer.component';
 import { CarouselComponent } from '../shared/carousel/carousel.component';
 import { ServiceCardComponent } from '../shared/service-card/service-card.component';
 import { ScrollUpButtonComponent } from '../shared/scroll-up-button/scroll-up-button.component';
+import { ProjectCardComponent } from '../shared/project-card/project-card.component';
 
 
 
@@ -24,7 +25,7 @@ import { ScrollUpButtonComponent } from '../shared/scroll-up-button/scroll-up-bu
     AboutUsComponent,
     ContactUsComponent,
     ProjectsComponent,
-    ServicesComponent
+    ServicesComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +37,7 @@ import { ScrollUpButtonComponent } from '../shared/scroll-up-button/scroll-up-bu
     CarouselComponent,
     ServiceCardComponent,
     ScrollUpButtonComponent,
+    ProjectCardComponent
 
   ]
 })

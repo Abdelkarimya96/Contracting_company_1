@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ScrollUpButtonComponent } from './shared/scroll-up-button/scroll-up-button.component';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ScrollUpButtonComponent } from './shared/scroll-up-button/scroll-up-but
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    ScrollUpButtonComponent
+    ScrollUpButtonComponent,
+    LoaderComponent
 ],
   providers: [
     provideClientHydration()

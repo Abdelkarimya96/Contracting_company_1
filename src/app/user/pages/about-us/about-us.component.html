@@ -1,1 +1,25 @@
-<p>about-us works!</p>
+<section id="about-us" class="about-us py-5 px-4">
+  <h2 class="section-title title mb-2">من نحن</h2>
+
+  <div class="row mt-4">
+
+    <!-- Text Section -->
+    <div class="col-sm-12 col-lg-6 text-center">
+      <p class="section-text">{{ generalInfo.about }}</p>
+      <p class="section-text">
+        <strong>أيام العمل:</strong> {{ generalInfo.work_hours }}
+      </p>
+      <!-- <p class="section-text">
+        <strong>العطلة الرسمية:</strong> {{ generalInfo.days_off }}
+      </p> -->
+    </div>
+
+    <!-- Video Section -->
+    <div class="col-sm-12 col-lg-6 text-center">
+        <video class="responsive-video m-4" controls [muted]="true" autoplay>
+          <source [src]="generalInfo.video" type="video/mp4">
+          المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+        </video>
+    </div>
+  </div>
+</section>

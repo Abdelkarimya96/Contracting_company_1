@@ -1,0 +1,109 @@
+<div *ngIf="project" class="project-card p-4">
+  <div id="project-details" class="project-details">
+
+    <!-- Project Title -->
+    <h2 class="project-header">{{ project?.title }}</h2>
+
+    <!-- Carousel Section -->
+    <div id="projectCarousel" class="carousel-section carousel slide" data-bs-ride="carousel">
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let projImg of projectImages; let i = index"
+          type="button"
+          data-bs-target="#projectCarousel"
+          [attr.data-bs-slide-to]="i"
+          [class.active]="i === 0"
+          [attr.aria-current]="i === 0 ? 'true' : null"
+          [attr.aria-label]="'Slide ' + (i + 1)"
+        ></button>
+      </div>
+
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+        <div *ngFor="let projImg of projectImages; let i = index" class="carousel-item" [class.active]="i === 0">
+          <img [src]="projImg" class="d-block w-100" [alt]="project?.title || 'Project Image'" style="min-height: max-content;" />
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+        <fa-icon class="icon-carousel" [icon]="faAngleLeft"></fa-icon>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+        <fa-icon class="icon-carousel" [icon]="faAngleRight"></fa-icon>
+      </button>
+
+    </div>
+
+    <!-- Project Details Section -->
+    <div class="details-section">
+      <h2>{{ project?.title }}</h2>
+      <p><strong>الموقع:</strong> {{ project?.location }}</p>
+      <p>{{ project?.description }}</p>
+    </div>
+
+    <!-- Project Info Section -->
+    <div class="project-info">
+      <h5 [routerLink]="['/user/course-details', project?.id]" class="project-title">
+        {{ project?.title }}
+      </h5>
+      <h4 [routerLink]="['/user/course-details', project?.id]" class="project-description">
+        {{ project?.description }}
+      </h4>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ng-container *ngIf="project; else notFoundTemplate">
+  <div id="project-details" class="project-details">
+    <div class="carousel-section">
+      <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <div
+            *ngFor="let projImg of projectImages; let i = index"
+            data-bs-target="#mainCarousel"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+            [attr.aria-current]="i === 0 ? 'true' : null"
+            [attr.aria-label]="'Slide ' + (i + 1)"
+          ></div>
+        </div>
+        <div class="carousel-inner">
+          <div *ngFor="let projImg of projectImages; let i = index" class="carousel-item" [class.active]="i === 0">
+            <img [src]="projImg" class="d-block w-100" [alt]="project.alt || 'Project Image'" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <fa-icon class="icon-carousel" [icon]="faAngleLeft"></fa-icon>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <fa-icon class="icon-carousel" [icon]="faAngleRight"></fa-icon>
+        </button>
+      </div>
+    </div>
+    <h2>{{ project?.title }}</h2>
+    <p><strong>الموقع:</strong> {{ project?.location }}</p>
+    <p>{{ project?.description }}</p>
+  </div>
+</ng-container>
+
+<ng-template #notFoundTemplate>
+  <div class="error-message">
+    <p>تعذر تحميل تفاصيل المشروع</p>
+  </div>
+</ng-template> -->

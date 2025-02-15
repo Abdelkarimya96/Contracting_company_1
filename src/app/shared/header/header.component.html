@@ -1,18 +1,19 @@
 <header style="position: absolute;" class="header-top d-lg-block d-none p-0">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 ">
+      <div class="col-md-6">
         <ul class="info-head d-flex align-items-center">
-          <li>
-            <a href="mailto:info@company.com">
+          <!-- Commented Out Email Section -->
+          <!-- <li>
+            <a [href]="'mailto:' + contactInfo?.email">
               <fa-icon [icon]="faEnvelope"></fa-icon>
-              <span class="mx-2">infoAtCompany.com</span>
+              <span class="mx-2">{{ contactInfo?.email }}</span>
             </a>
-          </li>
+          </li> -->
           <li>
-            <a href="tel:+966548268114">
+            <a [href]="'tel:' + contactInfo?.phone_number">
               <fa-icon [icon]="faPhone"></fa-icon>
-              <span class="mx-2">+12345678</span>
+              <span class="mx-2">{{ contactInfo?.phone_number }}</span>
             </a>
           </li>
         </ul>
@@ -20,20 +21,26 @@
 
       <div class="col-md-6">
         <div class="social-head">
-          <a href="https://www.facebook.com" target="_blank">
-            <fa-icon [icon]="faFacebook" aria-hidden="true"></fa-icon>
+          <a *ngIf="socialLinks?.whatsapp" [href]="socialLinks.whatsapp" target="_blank">
+            <fa-icon [icon]="faWhatsapp"></fa-icon>
           </a>
-          <a href="https://www.instagram.com" target="_blank">
-            <fa-icon [icon]="faInstagram" aria-hidden="true"></fa-icon>
+          <a *ngIf="socialLinks?.instagram" [href]="socialLinks.instagram" target="_blank">
+            <fa-icon [icon]="faInstagram"></fa-icon>
           </a>
-          <a href="https://www.behance.net/" target="_blank">
-            <fa-icon [icon]="faBehance" aria-hidden="true"></fa-icon>
+          <a *ngIf="socialLinks?.behance" [href]="socialLinks.behance" target="_blank">
+            <fa-icon [icon]="faBehance"></fa-icon>
           </a>
-          <a href="https://twitter.com" target="_blank">
-            <fa-icon [icon]="faTwitter" aria-hidden="true"></fa-icon>
+          <a *ngIf="socialLinks?.twitter" [href]="socialLinks.twitter" target="_blank">
+            <fa-icon [icon]="faTwitter"></fa-icon>
           </a>
-          <a href="https://www.pinterest.com" target="_blank">
-            <fa-icon [icon]="faPinterest" aria-hidden="true"></fa-icon>
+          <a *ngIf="socialLinks?.pinterest" [href]="socialLinks.pinterest" target="_blank">
+            <fa-icon [icon]="faPinterest"></fa-icon>
+          </a>
+          <a *ngIf="socialLinks?.tiktok" [href]="socialLinks.tiktok" target="_blank">
+            <fa-icon [icon]="faTiktok"></fa-icon>
+          </a>
+          <a *ngIf="socialLinks?.snapchat" [href]="socialLinks.snapchat" target="_blank">
+            <fa-icon [icon]="faSnapchat"></fa-icon>
           </a>
         </div>
       </div>
@@ -41,19 +48,21 @@
   </div>
 </header>
 
-<nav class="navbar navbar-expand-lg py-1" id="navbar">
+
+<nav [ngClass]="{'collapsed': isNavbarOpen}" class="navbar navbar-expand-lg py-1" id="navbar">
   <div class="container">
     <a class="navbar-brand" routerLink="/user/home">
       <img style="max-width: 4rem; border-radius: 1rem;"
             class="logo" src="./../../../assets/images/logo.jpg" alt="logo image"
       >
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <button (click)="toggleNavbar()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <fa-icon [icon]="!isNavbarOpen? faBars : faX"></fa-icon>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+
         <li class="nav-item">
           <a
             class="nav-link"
@@ -64,29 +73,35 @@
             الرئيسية
           </a>
         </li>
+
         <li class="nav-item">
           <a
             class="nav-link"
             routerLink="/user/projects"
+            fragment="our-projects"
             routerLinkActive="nav-link-active"
             [routerLinkActiveOptions]="{ exact: true }"
           >
             المشروعات
           </a>
         </li>
+
         <li class="nav-item">
           <a
             class="nav-link"
             routerLink="/user/services"
+            fragment="our-services"
             routerLinkActive="nav-link-active"
             [routerLinkActiveOptions]="{ exact: true }"
           >
             الخدمات
           </a>
         </li>
+
         <li class="nav-item">
           <a
             class="nav-link"
+            fragment="about-us"
             routerLink="/user/about-us"
             routerLinkActive="nav-link-active"
             [routerLinkActiveOptions]="{ exact: true }"
@@ -94,6 +109,7 @@
             من نحن
           </a>
         </li>
+
         <li class="nav-item">
           <a
             routerLink="/user/home"
@@ -105,6 +121,7 @@
           اتصل بنا
           </a>
         </li>
+
       </ul>
     </div>
   </div>
