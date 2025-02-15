@@ -70,11 +70,10 @@
   padding: 0 0.5rem;
   border-radius: 5px;
 }
-.icon-carousel button:hover{
-  .icon-carousel{
-    opacity: 0.8;
-    color: var(--sec-color);
-  }
+button:hover .icon-carousel,
+.icon-carousel.active{
+  opacity: 0.8;
+  color: var(--sec-color);
 }
 
 .mainCarousel .carousel-caption button{

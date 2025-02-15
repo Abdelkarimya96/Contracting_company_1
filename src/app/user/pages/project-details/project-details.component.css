@@ -55,10 +55,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  background: rgba(0, 0, 0);
-  padding: 0 10px;
-  height: fit-content;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0!important;
+  margin: 0!important;
+  max-height: fit-content;
 }
 
 .carousel-indicators img {
@@ -73,23 +74,25 @@
   border: 2px solid #fff;
 }
 
-/* Carousel Controls */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%!important;
-}
-
-.icon-carousel {
+.icon-carousel{
   font-size: 1.8rem;
-  color: white;
+  color: var(--dark-color);
+  background-color: var(--bg-color);
+  opacity: 0.4;
+  transition: all 0.2s ease;
+  padding: 0 0.5rem;
+  border-radius: 5px;
+}
+.carousel-control-next{
+  justify-content: start;
+}
+.carousel-control-prev{
+  justify-content: end;
+}
+button:hover .icon-carousel,
+.icon-carousel.active{
+  opacity: 0.8;
+  color: var(--sec-color);
 }
 
 /* Project Details */
@@ -175,6 +178,11 @@
   }
 
   .carousel-section {
-    width: 95%;
+    width: 100%;
+  }
+  .carousel-indicators img {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
   }
 }
