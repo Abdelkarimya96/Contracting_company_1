@@ -1,0 +1,150 @@
+/* Project Card Styling */
+.project-card {
+  background-color: var(--bg-color, #f8f9fa);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Project Title */
+.project-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color, #333);
+  margin-bottom: 1.5rem;
+}
+
+/* Carousel Section */
+.carousel-section {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Carousel Images */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.carousel-indicators .active {
+  background: #fff;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-carousel {
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Project Details */
+.details-section {
+  padding: 1.5rem;
+}
+
+.details-section h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color, #333);
+  margin-bottom: 1rem;
+}
+
+.details-section p {
+  font-size: 1.1rem;
+  color: var(--text-color, #555);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .project-header {
+    font-size: 1.8rem;
+  }
+  .details-section h2 {
+    font-size: 1.6rem;
+  }
+  .details-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-card {
+    padding: 1.2rem;
+  }
+  .project-header {
+    font-size: 1.6rem;
+  }
+  .details-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-indicators {
+    padding: 8px;
+  }
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+  }
+  .icon-carousel {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card {
+    padding: 1rem;
+  }
+  .project-header {
+    font-size: 1.4rem;
+  }
+  .details-section h2 {
+    font-size: 1.4rem;
+  }
+  .details-section p {
+    font-size: 0.95rem;
+  }
+  .carousel-indicators {
+    padding: 6px;
+  }
+}

@@ -3,30 +3,32 @@
   flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   background: var(--dark-color);
   padding: 2rem;
-  height: 240px;
+  height: auto;
   min-height: fit-content;
-}
-
-/* Service Text */
-.service-card .text-container {
-  flex: 1;
-  min-width: 250px;
   text-align: center;
 }
 
+.service-card .text-container {
+  flex: 1;
+  min-width: 250px;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Service Title */
 .service-card .service-title {
   color: var(--gold-color-shiny);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
+/* Service Description */
 .service-card .service-description {
   color: var(--gray-color);
-  font-size: 1.2rem; /* Keeping original font size */
+  font-size: 1.2rem;
   padding: 1rem 2rem;
   line-height: 1.5;
 }
@@ -34,117 +36,93 @@
 /* Service Image */
 .service-card img {
   width: 100%;
-  /* max-width: 250px; */
+  max-width: 300px;
   height: auto;
   object-fit: cover;
   border-radius: 0.4rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* ---------- Responsive Design ---------- */
+@media (max-width: 1200px) {
   .service-card {
-    flex-direction: column;
-    text-align: center;
+    padding: 1.8rem;
+    gap: 1.2rem;
   }
 
-  .service-card img {
-    max-width: 400px;
-  }
-
-  .service-card .service-description {
-    padding: 1rem;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .service-card {
-    padding: 1.5rem;
-  }
-
-  /* .service-card img {
-    max-width: 180px;
-  } */
-
-  .service-card .service-description {
-    padding: 0.5rem;
-  }
-}
-
-
-
-/* Medium screens (tablets in landscape mode and small laptops) */
-@media (max-width: 1024px) {
-  /* .service-card {
-    padding: 1.5rem;
-    gap: 0.8rem;
-  } */
-
-  .service-card img {
-    max-width: 220px;
-    height: auto;
+  .service-card .service-title {
+    font-size: 1.6rem;
   }
 
   .service-card .service-description {
     font-size: 1.1rem;
-    padding: 1rem;
-  }
-}
-
-/* Small tablets and large mobile phones */
-@media (max-width: 768px) {
-  .service-card {
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .service-card img {
-    max-width: 300px;
-    height: auto;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .service-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .service-card .text-container {
+    max-width: 100%;
+  }
+
+  .service-card .service-title {
+    font-size: 1.5rem;
   }
 
   .service-card .service-description {
     font-size: 1rem;
-    padding: 0.8rem;
-  }
-}
-
-/* Extra-small screens (narrow mobile screens) */
-@media (max-width: 360px) {
-  .service-card {
     padding: 1rem;
   }
 
   .service-card img {
-    max-width: 200px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding: 1.2rem;
+    text-align: center;
   }
 
   .service-card .service-title {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+  }
+
+  .service-card .service-description {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .service-card img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card .service-title {
+    font-size: 1.3rem;
   }
 
   .service-card .service-description {
     font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-}
-
-/* Extra-large screens (desktops and wide monitors) */
-@media (min-width: 1440px) {
-  /* .service-card {
-    max-width: 80%;
-    margin: auto;
-  } */
-
-  .service-card .service-description {
-    font-size: 1.3rem;
-    padding: 1.2rem;
+    padding: 0.6rem;
   }
 
   .service-card img {
-    max-width: 300px;
-    height: auto;
+    max-width: 200px;
   }
 }
