@@ -1,28 +1,41 @@
-/* Project Card Styling */
 .project-card {
-  background-color: var(--bg-color, #f8f9fa);
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 900px;
-  margin: auto;
-  overflow: hidden;
-  text-align: center;
+  background-color: #fff;
+  height: max-content;
+  width: 100%;
+  padding: 2rem 0;
+  min-height: 80vh;
 }
+.project-details {
+  border-radius: 10px;
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+}
+.carousel-section {
+  background-color: #d5d5d5;
+  padding: 10px 40px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+  text-align: center;
+  height: auto;
+  width: 100%;
+}
+
+
 
 /* Project Title */
 .project-header {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--primary-color, #333);
+  color: var(--sec-color);
   margin-bottom: 1.5rem;
 }
 
 /* Carousel Section */
-.carousel-section {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-}
 
 /* Carousel Images */
 .carousel-item img {
@@ -35,28 +48,29 @@
 /* Carousel Indicators */
 .carousel-indicators {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%!important;
+  transform: translateX(50%);
+  bottom: 0!important;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px;
+  background: rgba(0, 0, 0);
+  padding: 0 10px;
+  height: fit-content;
+}
+
+.carousel-indicators img {
+  width: 40px;
+  height: 40px;
   border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  margin: 0!important;
 }
 
-.carousel-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  border: none;
-  transition: background 0.3s ease-in-out;
-}
-
-.carousel-indicators .active {
-  background: #fff;
+.carousel-indicators img.active {
+  border: 2px solid #fff;
 }
 
 /* Carousel Controls */
@@ -69,6 +83,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  top: 50%!important;
 }
 
 .icon-carousel {
@@ -104,6 +120,9 @@
   .details-section p {
     font-size: 1rem;
   }
+  .carousel-section{
+    width: 65%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -115,6 +134,9 @@
   }
   .details-section {
     padding: 1rem;
+  }
+  .carousel-section {
+    width: 75%;
   }
 }
 
@@ -128,6 +150,10 @@
   }
   .icon-carousel {
     font-size: 1.5rem;
+  }
+
+  .carousel-section{
+    width: 85%;
   }
 }
 
@@ -146,5 +172,9 @@
   }
   .carousel-indicators {
     padding: 6px;
+  }
+
+  .carousel-section {
+    width: 95%;
   }
 }

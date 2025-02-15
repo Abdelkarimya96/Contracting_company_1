@@ -5,19 +5,19 @@
     <h2 class="project-header">{{ project?.title }}</h2>
 
     <!-- Carousel Section -->
-    <div id="projectCarousel" class="carousel-section carousel slide" data-bs-ride="carousel">
+    <div id="projectCarousel" class="carousel-section carousel">
 
       <!-- Carousel Indicators -->
-      <div class="carousel-indicators">
-        <button
+      <div class="carousel-indicators m-0">
+        <img
+          [src]="projImg"
           *ngFor="let projImg of projectImages; let i = index"
-          type="button"
           data-bs-target="#projectCarousel"
           [attr.data-bs-slide-to]="i"
           [class.active]="i === 0"
           [attr.aria-current]="i === 0 ? 'true' : null"
           [attr.aria-label]="'Slide ' + (i + 1)"
-        ></button>
+        />
       </div>
 
       <!-- Carousel Inner -->
@@ -28,10 +28,10 @@
       </div>
 
       <!-- Carousel Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
         <fa-icon class="icon-carousel" [icon]="faAngleLeft"></fa-icon>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
         <fa-icon class="icon-carousel" [icon]="faAngleRight"></fa-icon>
       </button>
 
@@ -39,21 +39,9 @@
 
     <!-- Project Details Section -->
     <div class="details-section">
-      <h2>{{ project?.title }}</h2>
       <p><strong>الموقع:</strong> {{ project?.location }}</p>
       <p>{{ project?.description }}</p>
     </div>
-
-    <!-- Project Info Section -->
-    <div class="project-info">
-      <h5 [routerLink]="['/user/course-details', project?.id]" class="project-title">
-        {{ project?.title }}
-      </h5>
-      <h4 [routerLink]="['/user/course-details', project?.id]" class="project-description">
-        {{ project?.description }}
-      </h4>
-    </div>
-
   </div>
 </div>
 
