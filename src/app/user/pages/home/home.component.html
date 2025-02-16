@@ -84,11 +84,11 @@
                   {{ info?.contact_info?.phone_number || 'غير متوفر' }}
                 </a>
               </p>
-              <p class="contact-text">
+              <!-- <p class="contact-text">
                 <a [href]="'mailto:' + info?.contact_info?.email">
                   {{ info?.contact_info?.email || 'غير متوفر' }}
                 </a>
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -98,13 +98,13 @@
           <div data-aos="fade-right" class="contact-card py-4 rounded">
             <fa-icon [icon]="faClock" class="mb-3"></fa-icon>
             <div class="card-text">
-              <h5 class="contact-title mb-2">ساعات العمل</h5>
+              <h5 class="contact-title mb-2">أيام العمل</h5>
               <p class="contact-text">
                 {{ info?.general_info?.work_hours || 'غير متوفر' }}
               </p>
-              <p class="contact-text">
+              <!-- <p class="contact-text">
                 {{ 'يوم الإجازة: ' + (info?.general_info?.days_off || 'غير متوفر') }}
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
