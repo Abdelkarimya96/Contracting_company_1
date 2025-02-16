@@ -22,9 +22,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       if (event instanceof NavigationStart) {
         this.loaderService.show();
       } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-        setTimeout(()=>{
-          this.loaderService.hide();
-        }, 1500)
+        this.loaderService.hide();
       }
     });
   }

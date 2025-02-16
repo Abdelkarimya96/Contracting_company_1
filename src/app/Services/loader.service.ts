@@ -11,6 +11,8 @@ export class LoaderService {
   }
 
   hide() {
-    this.isLoading.set(false);
+    setTimeout(() => {
+      this.isLoading.set(false);
+    }, 1000);
   }
 }

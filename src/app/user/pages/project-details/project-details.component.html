@@ -11,6 +11,7 @@
       <div class="carousel-indicators m-0">
         <img
           [src]="projImg"
+          loading="lazy"
           *ngFor="let projImg of projectImages; let i = index"
           data-bs-target="#projectCarousel"
           [attr.data-bs-slide-to]="i"
@@ -23,7 +24,7 @@
       <!-- Carousel Inner -->
       <div class="carousel-inner">
         <div *ngFor="let projImg of projectImages; let i = index" class="carousel-item" [class.active]="i === 0">
-          <img [src]="projImg" class="d-block w-100" [alt]="project?.title || 'Project Image'" style="min-height: max-content;" />
+          <img loading="lazy" [src]="projImg" class="d-block w-100" [alt]="project?.title || 'Project Image'" style="min-height: max-content;" />
         </div>
       </div>
 

@@ -21,16 +21,24 @@ export class CarouselComponent implements OnInit {
 
   @Input() slides = [
     {
-      id: '1',
-      src: '../../../assets/images/main-carousel/pexels-pixabay-269077.jpg',
-      title: 'في شركة مجال البناء للمقاولات العامة، نقدم مجموعة متكاملة من الخدمات المتخصصة في قطاع البناء',
-      alt: 'Modern building structure',
+      id:
+        1,
+      src:
+        '../../../assets/images/main-carousel/pexels-pixabay-269077.jpg',
+      title:
+      'شركة أبو ياسين للمقاولات العامة شركة رائدة في مجال البناء والتشييد.',
+      alt:
+        'Modern building structure',
     },
     {
-      id: '2',
-      src: '../../../assets/images/main-carousel/pexels-pixabay-302769.jpg',
-      title: 'في شركة مجال البناء للمقاولات العامة، نقدم مجموعة متكاملة من الخدمات المتخصصة في قطاع البناء',
-      alt: 'Skyscrapers with glass windows',
+      id:
+        2,
+      src:
+        '../../../assets/images/main-carousel/pexels-pixabay-302769.jpg',
+      title:
+      'شركة أبو ياسين للمقاولات العامة شركة رائدة في مجال البناء والتشييد.',
+      alt:
+        'Skyscrapers with glass windows',
     },
     // {
     //   id: '3',
