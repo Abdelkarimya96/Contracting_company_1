@@ -21,7 +21,7 @@
 
       <div class="col-md-6">
         <div class="social-head">
-          <a *ngIf="socialLinks?.whatsapp" [href]="socialLinks.whatsapp" target="_blank">
+          <a *ngIf="socialLinks?.whatsapp" [href]="'https://wa.me/' + socialLinks?.whatsapp" target="_blank">
             <fa-icon [icon]="faWhatsapp"></fa-icon>
           </a>
           <a *ngIf="socialLinks?.instagram" [href]="socialLinks.instagram" target="_blank">
