@@ -11,7 +11,7 @@ export class ServicesArrayService {
       [
         {
           title: ' ترميمات وتوسيعات',
-          description: "جميع أعمال الهدم والبناء والتوسيعات",
+          description: "جميع أعمال الترميمات والتوسيعات",
           image: './../../assets/images/services/ترميمات.jpg',
         },
         {
@@ -26,13 +26,13 @@ export class ServicesArrayService {
         },
         {
           title: 'أعمال العزل',
-          description: 'عازل أسود فوم - عازل جيتاروف مع طربال حرير سعودي - عازل سكريت',
+          description: 'عازل أسود - فوم - عازل جيتاروف مع طربال حرير سعودي - عازل سكريت',
           image: './../../assets/images/services/عزل.jpg',
         },
         {
-          title: 'الأصباغ',
-          description: 'جميع أنواع الأصباغ الداخلية والخارجية',
-          image: './../../assets/images/services/أصباغ.jpg',
+          title: 'أعمال الصحي',
+          description: 'جميع أنواع الأصباغ الداخلية والخارجية وتسليك مجاري المطبخ',
+          image: './../../assets/images/services/أعمال الصحي.jpg',
         },
         {
           title: 'تشطيبات وترميمات',
