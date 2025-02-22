@@ -26,7 +26,7 @@ export class CarouselComponent implements OnInit {
       src:
         '../../../assets/images/main-carousel/pexels-pixabay-269077.jpg',
       title:
-      'شركة المجموعة للتجارة العامة والمقاولات',
+      ' شركة المجموعة للتجارة العامة والمقاولات شركة رائدة في مجال البناء والتشييد',
       alt:
         'Modern building structure',
     },
@@ -36,7 +36,7 @@ export class CarouselComponent implements OnInit {
       src:
         '../../../assets/images/main-carousel/pexels-pixabay-302769.jpg',
       title:
-      'شركة المجموعة للتجارة العامة والمقاولات',
+      ' شركة المجموعة للتجارة العامة والمقاولات شركة رائدة في مجال البناء والتشييد',
       alt:
         'Skyscrapers with glass windows',
     },

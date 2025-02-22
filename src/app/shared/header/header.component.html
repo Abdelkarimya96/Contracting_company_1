@@ -49,7 +49,7 @@
 </header>
 
 
-<nav [ngClass]="{'collapsed': isNavbarOpen}" class="navbar navbar-expand-lg py-1" id="navbar">
+<nav [ngClass]="{'collapsed': isNavbarOpen, 'sticky': isSticky}" class="navbar navbar-expand-lg py-1" id="navbar">
   <div class="container">
     <a class="navbar-brand" routerLink="/user/home">
       <img style="max-width: 4rem; border-radius: 1rem;"

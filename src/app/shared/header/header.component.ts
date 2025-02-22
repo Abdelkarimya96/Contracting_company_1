@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from '../carousel/carousel.component';
@@ -35,6 +35,7 @@ export class HeaderComponent implements OnInit {
   faX = faX;
 
   isNavbarOpen: boolean = false;
+  isSticky: boolean = false;
   contactInfo: any;
   socialLinks: any;
 
@@ -49,5 +50,8 @@ export class HeaderComponent implements OnInit {
   toggleNavbar() {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
-
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isSticky = window.scrollY > 100;
+  }
 }
