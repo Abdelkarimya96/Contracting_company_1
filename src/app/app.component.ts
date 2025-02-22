@@ -30,7 +30,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     AOS.init({
       duration: 1500,
-      once: false,
+      once: true,
       delay: 0,
       easing: 'ease-in-out',
       offset: 0,

@@ -129,7 +129,7 @@ button:hover .icon-carousel,
 
 @media (max-width: 992px) {
   .mainCarousel {
-    height: 80vh;
+    height: 85vh;
   }
 
   .mainCarousel .carousel-caption h5,
@@ -151,7 +151,7 @@ button:hover .icon-carousel,
 
 @media (max-width: 768px) {
   .mainCarousel {
-    height: 70vh;
+    height: 75vh;
   }
 
   .mainCarousel .carousel-caption h5,
@@ -176,7 +176,7 @@ button:hover .icon-carousel,
 
 @media (max-width: 576px) {
   .mainCarousel {
-    height: 60vh;
+    height: 70vh;
   }
   .mainCarousel .carousel-caption h5,
   .mainCarousel .carousel-caption .slide-title {

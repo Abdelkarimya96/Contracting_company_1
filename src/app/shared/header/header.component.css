@@ -21,10 +21,18 @@ header .container{
   display: flex;
   align-items: center;
   text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
 }
 
 .info-head li a {
   color: var(--bg-color);
+  transition: 0.5s all;
+}
+
+.info-head li a:hover{
+  color: yellow;
 }
 
 .social-head {
@@ -36,26 +44,24 @@ header .container{
   display: flex;
   height: 2.2rem;
   width: 2.2rem;
-  border: 2px solid var(--bg-color);
   justify-content: center;
   align-items: center;
   color: var(--bg-color);
   border-radius: 50%;
   margin: 0.3rem;
   transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0.4rem;
 }
 .social-head a fa-icon{
   font-size: 1.4rem;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
-.social-head a:hover{
+.social-head fa-icon:hover{
   transform: rotate(360deg) scale(1.1);
-  color: var(--sec-color);
-  border-color: var(--sec-color);
-  fa-icon{
-    transform: scale(1.1);
-  }
+  color: yellow;
 }
 .header-top {
   background: none;

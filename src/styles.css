@@ -284,8 +284,8 @@ textarea {
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-  /* background: var(--gold-color); */
-  /* border-radius: 0.4rem; */
+  background: rgb(205, 205, 205);
+
 }
 
 /* Scrollbar Handle */

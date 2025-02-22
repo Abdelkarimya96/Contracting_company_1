@@ -1,4 +1,4 @@
-<div *ngIf="project" class="project-card py-4">
+<div *ngIf="project" class="project-card py-4 px-0">
   <div id="project-details" class="project-details">
 
     <!-- Project Title -->
@@ -24,7 +24,7 @@
       <!-- Carousel Inner -->
       <div class="carousel-inner">
         <div *ngFor="let projImg of projectImages; let i = index" class="carousel-item" [class.active]="i === 0">
-          <img loading="lazy" [src]="projImg" class="d-block w-100" [alt]="project?.title || 'Project Image'" style="min-height: max-content;" />
+          <img loading="lazy" [src]="projImg" [alt]="project?.title || 'Project Image'" style="min-height: max-content;" />
         </div>
       </div>
 

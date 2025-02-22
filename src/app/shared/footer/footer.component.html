@@ -1,5 +1,5 @@
 <footer>
-  <div class="contain px-4 pt-5 pb-2" data-aos="zoom-in">
+  <div class="contain px-4 pt-lg-5 pb-2" data-aos="zoom-in">
     <div class="row">
       <!-- About the Company -->
       <div class="col-md-4 p-0" data-aos="fade-up">
@@ -97,21 +97,21 @@
         <h5 class="mt-5 mb-4 title  me-0">تواصل معنا</h5>
         <div class="info">
           <fa-icon [icon]="faLocationDot" class="fa-info"></fa-icon>
-          <span>{{ info?.contact_info?.address }}</span>
+          <span><strong>العنوان :</strong> {{ info?.contact_info?.address }}</span>
         </div>
         <div class="info">
           <fa-icon [icon]="faPhone" class="fa-info"></fa-icon>
-          <span>رقم الهاتف: {{ info?.contact_info?.phone_number }}</span>
+          <span><strong>رقم الهاتف:</strong> {{ info?.contact_info?.phone_number }}</span>
         </div>
-        <div class="info">
+        <!-- <div class="info">
           <fa-icon [icon]="faEnvelope" class="fa-info"></fa-icon>
           <span>البريد الإلكتروني: {{ info?.contact_info?.email }}</span>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <div class="copyright">
-      <small>© جميع الحقوق محفوظة | شركة {{ info?.general_info?.name }} 2025</small>
+      <small>© جميع الحقوق محفوظة | {{ info?.general_info?.name }} 2025</small>
     </div>
   </div>
 </footer>

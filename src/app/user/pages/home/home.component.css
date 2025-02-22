@@ -20,7 +20,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 200px;
+  height: fit-content;
   padding-right: 2rem;
   padding-left: 1rem;
   background-color: rgb(226, 237, 242);
@@ -46,7 +46,7 @@
   align-items: start;
   p{
     text-align: right;
-    width: 200px;
+    min-width: 200px;
   }
 }
 .contact-title {

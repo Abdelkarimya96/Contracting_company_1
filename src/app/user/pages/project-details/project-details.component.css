@@ -2,7 +2,6 @@
   background-color: #fff;
   height: max-content;
   width: 100%;
-  padding: 2rem 0;
   min-height: 80vh;
 }
 .project-details {
@@ -45,10 +44,11 @@
 /* Carousel Section */
 
 /* Carousel Images */
-.carousel-item img {
+.carousel-section .carousel-inner img {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  /* max-height: 500px!important; */
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -120,7 +120,12 @@ button:hover .icon-carousel,
   color: var(--text-color, #555);
   line-height: 1.6;
 }
+/* @media (min-width: 1200px) {
+ .carousel-section{
+  transform: scale(0.7);
 
+ }
+} */
 /* Responsive Design */
 @media (max-width: 1200px) {
   .project-header {
@@ -193,5 +198,9 @@ button:hover .icon-carousel,
     width: 20px;
     height: 20px;
     border-radius: 2px;
+  }
+
+  .carousel-item img {
+    height: 250px;
   }
 }
