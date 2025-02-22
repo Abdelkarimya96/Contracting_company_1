@@ -249,7 +249,7 @@ textarea {
     right: 0;
     width: 10px;
     height: 10px;
-    background: var(--sec-color);
+    background: var(--gold-color);
     bottom: calc(-0.5rem - 5px);
     border-radius: 50%;
     animation: rightLeft 4s linear infinite;
